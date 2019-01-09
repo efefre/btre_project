@@ -28,3 +28,7 @@ div.breadcrumbs a {
 div.breadcrumbs a:hover {
     color: #214f99;
 }
+
+.module h2, .module caption, .inline-group h2 {
+    background: #30caa0;
+}
