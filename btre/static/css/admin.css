@@ -15,3 +15,16 @@ a:link, a:visited {
 a:hover {
     color: #214f99
 }
+
+div.breadcrumbs {
+    background: #30caa0;
+    color: #214f99;
+}
+
+div.breadcrumbs a {
+    color: #10284e;
+}
+
+div.breadcrumbs a:hover {
+    color: #214f99;
+}
