@@ -7,3 +7,11 @@
 #branding h1 {
     color: #fff;
 }
+
+a:link, a:visited {
+    color: #10284e;
+}
+
+a:hover {
+    color: #214f99
+}
