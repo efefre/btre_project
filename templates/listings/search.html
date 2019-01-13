@@ -52,7 +52,11 @@
                 <select name="price" class="form-control">
                   <option selected="true" disabled="disabled">Max Price (All)</option>
                   {% for key, value in price_choices.items %}
-                  <option value="{{ key }}">{{ value }}</option>
+                  <option value="{{ key }}"
+                  {% if key == values.price %}
+                    selected
+                    {% endif %}
+                  >{{ value }}</option>
                   {% endfor %}
                 </select>
               </div>
