@@ -12,3 +12,7 @@ def login(request):
 
 def logout(request):
     return redirect('index')
+
+
+def dashboard(request):
+    return render(request, 'accounts/dashboard.html')
