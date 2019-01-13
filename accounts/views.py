@@ -11,7 +11,11 @@ def register(request):
 
 
 def login(request):
-    return render(request, 'accounts/login.html')
+    if request.method == 'POST':
+        # Login User
+        pass
+    else:
+        return render(request, 'accounts/login.html')
 
 
 def logout(request):
