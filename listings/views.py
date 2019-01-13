@@ -38,6 +38,12 @@ def search(request):
         if keywords:
             queryset_list = queryset_list.filter(description__icontains=keywords)
 
+    # City
+    if 'city' in request.GET:
+        city = request.GET['city']
+        if city:
+            queryset_list = queryset_list.filter(city__iexact=city)
+
     context = {
         'price_choices': price_choices,
         'bedroom_choices': bedroom_choices,
