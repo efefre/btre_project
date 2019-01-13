@@ -40,7 +40,11 @@
                 <select name="bedrooms" class="form-control">
                   <option selected="true" disabled="disabled">Bedrooms (Any)</option>
                   {% for key, value in bedroom_choices.items %}
-                  <option value="{{ key }}">{{ value }}</option>
+                  <option value="{{ key }}"
+                  {% if key == values.bedrooms %}
+                    selected
+                    {% endif %}
+                  >{{ value }}</option>
                   {% endfor %}
                 </select>
               </div>
