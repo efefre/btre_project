@@ -44,6 +44,12 @@ def search(request):
         if city:
             queryset_list = queryset_list.filter(city__iexact=city)
 
+    # State
+    if 'state' in request.GET:
+        state = request.GET['state']
+        if state:
+            queryset_list = queryset_list.filter(state__iexact=state)
+
     context = {
         'price_choices': price_choices,
         'bedroom_choices': bedroom_choices,
