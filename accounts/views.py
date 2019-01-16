@@ -5,9 +5,13 @@ from django.contrib import messages
 # Create your views here.
 def register(request):
     if request.method == 'POST':
-        # Register User
-        messages.error(request, 'Testing error message')
-        return redirect(register)
+        # Get form values
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+        password2 = request.POST['password2']
     else:
         return render(request, 'accounts/register.html')
 
