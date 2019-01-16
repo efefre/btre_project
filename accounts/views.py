@@ -19,7 +19,12 @@ def register(request):
                 messages.error(request, 'That username is taken')
                 return redirect('register')
             else:
-                pass
+                if User.objects.filter(email=email).exists():
+                    messages.error(request, 'That email is being used')
+                    return redirect('register')
+                else:
+                    # Looks good
+                    pass
         else:
             messages.error(request, 'Passwords do not match')
             return redirect('register')
