@@ -12,6 +12,14 @@ def register(request):
         email = request.POST['email']
         password = request.POST['password']
         password2 = request.POST['password2']
+
+        # Check if passwords match
+        if password == password2:
+            pass
+        else:
+            messages.error(request, 'Passwords do not match')
+            return redirect('register')
+
     else:
         return render(request, 'accounts/register.html')
 
