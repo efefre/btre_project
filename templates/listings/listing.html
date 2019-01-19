@@ -167,7 +167,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form>
+          <form action="{% url 'contact' %}" method="POST">
             <div class="form-group">
               <label for="property_name" class="col-form-label">Property:</label>
               <input type="text" name="listing" class="form-control" value="45 Drivewood Cirlce" disabled>
