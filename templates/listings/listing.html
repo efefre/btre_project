@@ -171,7 +171,7 @@
             {% csrf_token %}
             <div class="form-group">
               <label for="property_name" class="col-form-label">Property:</label>
-              <input type="text" name="listing" class="form-control" value="45 Drivewood Cirlce" disabled>
+              <input type="text" name="listing" class="form-control" value="{{ listing.name }}" disabled>
             </div>
             <div class="form-group">
               <label for="name" class="col-form-label">Name:</label>
